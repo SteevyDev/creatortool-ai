@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreatorTool AI - Analyseur Stratégique de Vidéos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">CREATOR<span>TOOL AI</span></div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Optimisez vos contenus <span>par l'IA</span></h1>
+            <p>Analysez n'importe quelle vidéo pour extraire sa stratégie, ses couleurs et sa miniature HD.</p>
+            
+            <div class="search-box">
+                <input type="text" id="videoLink" placeholder="Collez le lien YouTube ici (ex: gaming, tuto...)">
+                <button id="analyzeBtn" onclick="analyzeVideo()">Lancer l'Analyse IA</button>
+            </div>
+            
+            <!-- Barre de progression IA -->
+            <div id="loaderContainer" style="display:none; margin-top: 20px;">
+                <p id="loaderText">Initialisation de l'IA CreatorTool...</p>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zone Publicitaire AdSense (Top) -->
+        <div class="ads-placeholder">Espace Publicitaire AdSense</div>
+
+        <section id="results" class="results-container" style="display: none;">
+            <div class="grid">
+                <!-- 1. La Miniature -->
+                <div class="card">
+                    <h3>Miniature Haute Définition</h3>
+                    <div id="thumbnailPreview"></div>
+                    <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">Clic droit pour enregistrer l'image</p>
+                </div>
+
+                <!-- 2. L'Analyse IA -->
+                <div class="card">
+                    <h3>Analyse Stratégique IA</h3>
+                    <div id="iaContent"></div>
+                </div>
+
+                <!-- 3. Palette & Hooks -->
+                <div class="card">
+                    <h3>Identité Visuelle</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #FF8C00;"></div>
+                        <div class="color-swatch" style="background: #FF4500;"></div>
+                        <div class="color-swatch" style="background: #1A1A1A;"></div>
+                    </div>
+                    <hr style="border: 0.1px solid #333; margin: 15px 0;">
+                    <h3>Hooks suggérés par CreatorTool</h3>
+                    <div id="hookList"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CreatorTool AI - Développé pour les créateurs de demain</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+  
